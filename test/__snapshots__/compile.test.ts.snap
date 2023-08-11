@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`compile test > test all dir 1`] = `
+"<template>
+  <HasPermission
+    :permission=\\"['merchant:admin:vehicle:dispatchOrgDriver:enable']\\"
+    link   >
+          <TableSwitch
+    
+  />
+          
+    </HasPermission>
+  <HasPermission
+    :permission=\\"['merchant:admin:vehicle:dispatchOrgDriver:add']\\"
+       >
+          <ElButton
+    
+    type=\\"primary\\"
+    >b</ElButton
+  >
+          
+    </HasPermission>
+
+  <HasPermission
+    :permission=\\"[
+      'merchant:admin:vehicle:dispatchOrgDriver:list',
+      'merchant:admin:vehicle:dispatchOrgDriver:update',
+    ]\\"
+     v-if=\\"true\\"  >
+          <el-dropdown-item
+    
+    
+  >
+    详情1
+  </el-dropdown-item>
+          
+    </HasPermission>
+  <HasPermission
+    :permission=\\"[
+      'merchant:admin:vehicle:dispatchOrgDriver:changeDispatchOrg',
+    ]\\"
+     v-else-if=\\"3\\"  >
+          <el-dropdown-item
+    
+    
+  >
+    详情2
+  </el-dropdown-item>
+          
+    </HasPermission>
+  <HasPermission
+    :permission=\\"[
+      'merchant:admin:vehicle:dispatchOrgDriver:changeDispatchOrg',
+    ]\\"
+     v-else  >
+          <el-dropdown-item
+    
+    
+  >
+    详情3
+  </el-dropdown-item>
+          
+    </HasPermission>
+
+  <HasPermission
+    :permission=\\"[
+      'merchant:admin:vehicle:dispatchOrgDriver:changeDispatchOrg',
+    ]\\"
+     v-if=\\"true\\"  >
+          <span
+    
+    
+    fallback=\\"无设备\\"
+    class=\\"remark-text-color cursor-pointer link-text\\"
+  >
+    <svg-icon
+      icon-class=\\"add\\"
+      style=\\"margin-right: 4px\\"
+      :size=\\"14\\"
+      color=\\"#4772EF\\"
+    />立即绑定
+  </span>
+          <template #fallback>无设备</template>
+    </HasPermission>
+</template>
+"
+`;

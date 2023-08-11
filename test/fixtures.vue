@@ -1,0 +1,52 @@
+<template>
+  <TableSwitch
+    v-hasPermission.link="['merchant:admin:vehicle:dispatchOrgDriver:enable']"
+  />
+  <ElButton
+    v-hasPermission="['merchant:admin:vehicle:dispatchOrgDriver:add']"
+    type="primary"
+    >b</ElButton
+  >
+
+  <el-dropdown-item
+    v-if="true"
+    v-hasPermission="[
+      'merchant:admin:vehicle:dispatchOrgDriver:list',
+      'merchant:admin:vehicle:dispatchOrgDriver:update',
+    ]"
+  >
+    详情1
+  </el-dropdown-item>
+  <el-dropdown-item
+    v-else-if="3"
+    v-hasPermission="[
+      'merchant:admin:vehicle:dispatchOrgDriver:changeDispatchOrg',
+    ]"
+  >
+    详情2
+  </el-dropdown-item>
+  <el-dropdown-item
+    v-else
+    v-hasPermission="[
+      'merchant:admin:vehicle:dispatchOrgDriver:changeDispatchOrg',
+    ]"
+  >
+    详情3
+  </el-dropdown-item>
+
+  <span
+    v-if="true"
+    v-hasPermission.fallback="[
+      'merchant:admin:vehicle:dispatchOrgDriver:changeDispatchOrg',
+    ]"
+    fallback="无设备"
+    class="remark-text-color cursor-pointer link-text"
+  >
+    <svg-icon
+      icon-class="add"
+      style="margin-right: 4px"
+      :size="14"
+      color="#4772EF"
+    />立即绑定
+  </span>
+</template>
